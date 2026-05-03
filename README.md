@@ -1,41 +1,29 @@
-Documentation
+# AI Lead Qualification System
 
-Project Overview
+A Python-based engine designed to automate the scoring of business leads. This project tracks my transition from basic logic to production-ready software architecture.
 
-This system is an automated lead qualification engine developed to address operational inefficiencies in SMB sales funnels, specifically targeting coaching centers in the Kozhikode region.
+---
 
-Market Context: Local centers typically receive ~200 leads per month. Manual processing results in significant resource waste, as the average conversion rate is 10%. This tool automates the filtering process to prioritize high-intent leads.
+## Day 2: Production Hardening & Observability
+**Focus: Resiliency and Structural Cleanliness**
 
-Technical Specification
+On Day 2, I refactored the script to meet enterprise standards. Key improvements include:
 
-1. Data Model
+- **Modular Architecture**: Rebuilt the engine using a 'Singular Specialist' function (`score_lead`) and a 'Master Manager' loop. This allows the system to scale easily.
+- **The Indestructible Shield**: Implemented `try/except` blocks to handle real-world "dirty data" like missing keys (`KeyError`) or invalid data types (`TypeError`).
+- **Professional Observability**: Integrated the Python `logging` module to create an automated audit trail in `app.log`.
+- **Gatekeeping**: Added logic to automatically skip and log leads with empty or invalid names.
 
-The system processes lead objects structured as Python dictionaries:
+### How to Run (Day 2 Version)
+1. Run `python3 lead_v2.py`.
+2. View live results in the terminal.
+3. Review `app.log` for the detailed technical history.
 
-name (str): Unique identifier for the prospect.
+---
 
-days_since_enquiry (int): Measure of lead recency.
+## Day 1: The Foundation
+**Focus: Basic Logic & Lead Categorization**
 
-budget_mentioned (bool): Indicator of financial intent.
-
-2. Validation Layer
-
-The engine includes a sanitization gate using .strip(). This ensures that malformed data or empty string entries are caught and logged as a "DATA ERROR" instead of causing system failure.
-
-3. Rule Engine Logic
-
-The qualification follows a deterministic scoring model:
-
-HOT: Enquiries < 7 days old with explicit budget intent.
-
-WARM: Enquiries < 15 days old.
-
-COLD: All other valid entries.
-
-4. Output
-
-Standardized terminal reporting is generated via f-string interpolation.
-
-Usage
-
-python3 leads_v1.py
+- Built the initial logic to categorize leads as "Hot," "Warm," or "Cold."
+- Used basic `if/elif/else` statements and `print()` functions.
+- (Keep your original Day 1 notes here!)
