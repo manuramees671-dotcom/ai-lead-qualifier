@@ -1,0 +1,6 @@
+2026-05-03 14:00:39,580:INFO:processed | ramees:Hot
+2026-05-03 14:00:39,582:INFO:processed | suresh:Warm
+2026-05-03 14:00:39,582:INFO:processed | Malabar IT solutions:Warm
+2026-05-03 14:00:39,582:WARNING:DATA ERROR:Skipping the lead with empty name
+2026-05-03 14:00:39,582:ERROR:CRITICAL ERROR:A required data key is missing from the lead.
+2026-05-03 14:00:39,582:INFO:processed | suresh:cold
